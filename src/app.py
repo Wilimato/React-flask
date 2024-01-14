@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from flask_pymongo import PyMongo
 from flask_cors import CORS
 
@@ -13,6 +13,26 @@ db = mongo.db.users
 
 @app.route('/users', methods=['POST'])
 def createUsers():
+    return "received"
+
+
+@app.route('/users', methods=['GET'])
+def getUsers():
+    return "received"
+
+
+@app.route('/user/<id>', methods=['GET'])
+def getUser():
+    return "received"
+
+
+@app.route('/users/<id>', methods=['GET'])
+def deleteUser():
+    return "received"
+
+
+@app.route('/users/<id>', methods=['PUT'])
+def updateUser():
     return "received"
 
 
